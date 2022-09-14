@@ -2,6 +2,8 @@ $primary-color: #5D6D7E;
 $secondary-color: #E74C3C;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
+$portrait-image: url(../img/portrait.jpg);
+$portrait-image-small: url(../img/portrait_small.jpg);
 $backgroud-opacity: 0.5;
 
 @mixin easeOut {
@@ -25,5 +27,30 @@ $backgroud-opacity: 0.5;
         background: rgba($primary-color, $backgroud-opacity);
       }
     }
+  }
+}
+
+// Media query mixins.
+@mixin mediaSmall {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMedium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLarge {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaHuge {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
