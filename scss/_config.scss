@@ -17,6 +17,7 @@ $background-opacity: 0.6;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      background-position: center;
 
       &:after {
         content: '';
